@@ -1,0 +1,100 @@
+insert into orderinfo values(4,"20200907-01","강호동","1",1,1,"2020-09-07","",2,"0",DEFAULT, 30000, '서울시 마포구');
+insert into orderinfo values(5,"20200907-01","강호동","1",1,2,"2020-09-07","",5,"0",DEFAULT, 20000, '서울시 강남구');
+insert into orderinfo values(6,"20200907-02","홍길동","",1,2,"2020-09-07","1234",1,"1",DEFAULT, 10000, '서울시 강남구');
+
+
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+<style type="text/css">
+body {
+  padding-top: 200px;
+}
+
+//테이블 적용
+.newbooktable {
+  border: 1px solid #ccc;
+  border-collapse: collapse;
+  margin: auto;
+  float : none;
+  padding: 0;
+  width: 50%;
+  table-layout: fixed;
+  text-align: center;
+}
+
+.newbooktable caption {
+  font-size: 1.5em;
+  margin: .5em 0 .75em;
+}
+
+.newbooktable tr {
+  background-color: #fdfdfd;
+  border: 1px solid #ddd;
+  padding: .35em;
+}
+
+.newbooktable th,
+.newbooktable td {
+  padding: .625em;
+  text-align: center;
+}
+
+.newbooktable th {
+  font-size: .85em;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  background:gray;
+  color: white;
+}
+
+@media screen and (max-width: 600px) {
+  .newbooktable {
+    border: 0;
+  }
+
+  .newbooktable caption {
+    font-size: 1.3em;
+  }
+  
+  .newbooktable th {
+    border: none;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+  }
+  
+  .newbooktable tr {
+    border-bottom: 3px solid #ddd;
+    display: block;
+    margin-bottom: .625em;
+  }
+  
+  .newbooktable td {
+    border-bottom: 1px solid #ddd;
+    display: block;
+    font-size: .8em;
+    text-align: center;
+  }
+  
+  .newbooktable td::before {
+    /*
+    * aria-label has no advantage, it won't be read inside a table
+    content: attr(aria-label);
+    */
+    content: attr(data-label);
+    float: left;
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+  
+  .newbooktable td:last-child {
+    border-bottom: 0;
+  }
+  
+}
+</style>
+
+<button type="submit" class="btn btn-outline-secondary">등록</button>
